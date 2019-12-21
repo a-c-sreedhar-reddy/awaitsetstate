@@ -38,9 +38,9 @@ function sleep(time) {
     // sleep...
   }
 }
-const HeavyComponent = React.memo(function HeavyComponent({ onChange }) {
+const HeavyComponent = function HeavyComponent({ onChange }) {
   sleep(200);
   return <></>;
-});
+};
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
